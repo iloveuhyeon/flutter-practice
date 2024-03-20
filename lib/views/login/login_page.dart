@@ -36,11 +36,12 @@ class LoginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TestUserModel.user = TestUserModel(
+                        TestUserModel.userInfo = TestUserModel(
                           _idController.text,
                           _pwController.text,
                         );
                         print(_idController.text);
+                        // 페이지 이동 전에 user 변수 초기화가 이루어지도록 위치 변경
                         context.go("/");
                       },
                       child: const Text("전송"),

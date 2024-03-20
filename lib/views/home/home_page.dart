@@ -16,6 +16,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    id = TestUserModel.userInfo.id;
+    pw = TestUserModel.userInfo.pw;
     super.initState();
   }
 
@@ -45,10 +47,10 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   Text(
-                    "ID : ${TestUserModel.user.id}",
+                    "ID : ${TestUserModel.userInfo.id}",
                   ),
                   Text(
-                    "PW : ${TestUserModel.user.pw}",
+                    "PW : ${TestUserModel.userInfo.pw}",
                   )
                 ],
               ),
