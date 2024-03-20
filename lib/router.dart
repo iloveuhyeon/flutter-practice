@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:practice/views/home/home_page.dart';
-import 'package:practice/views/home/setting/setting_page.dart';
-import 'package:practice/views/home/sign_up/sign_up_page.dart';
+import 'package:practice/views/setting/setting_page.dart';
+import 'package:practice/views/sign_up/sign_up_page.dart';
 import 'package:practice/views/login/login_page.dart';
 
 class PageRouter {
