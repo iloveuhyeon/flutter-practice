@@ -1,21 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:practice/models/test_user_models.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final TextEditingController _idController = TextEditingController();
+  final TextEditingController _pwController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              Text("login page"),
+              const Text("login page"),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 100.0),
+                padding: const EdgeInsets.symmetric(horizontal: 100.0),
                 child: Column(
-                  children: [],
+                  children: [
+                    TextField(
+                      controller: _idController,
+                      decoration: const InputDecoration(
+                        labelText: "ID",
+                      ),
+                    ),
+                    TextField(
+                      controller: _pwController,
+                      decoration: const InputDecoration(
+                        labelText: "PW",
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        TestUserModel.userInfo = TestUserModel(
+                          _idController.toString(),
+                          _pwController.toString(),
+                        );
+                        context.go("/home");
+                      },
+                      child: const Text("전송"),
+                    )
+                  ],
                 ),
               )
             ],

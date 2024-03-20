@@ -3,4 +3,6 @@ class TestUserModel {
   final String pw;
 
   TestUserModel(this.id, this.pw);
+
+  static late TestUserModel userInfo;
 }

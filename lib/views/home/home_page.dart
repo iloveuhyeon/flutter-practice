@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:practice/models/test_user_models.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,9 +15,9 @@ class HomePage extends StatelessWidget {
             const Text("body"),
             ElevatedButton(
               onPressed: () {
-                context.go('/login');
+                context.go('/home');
               },
-              child: const Text("login"),
+              child: const Text("/home"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -27,6 +28,12 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => context.go("/setting"),
               child: const Text("setting"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "ID${TestUserModel.userInfo.id.toString()}",
+              ),
             )
           ],
         ),
