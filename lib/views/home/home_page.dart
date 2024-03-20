@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/models/test_user_models.dart';
+import 'package:practice/views/login/login_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String id = "";
+  String pw = "";
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +26,6 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const Text("body"),
-            ElevatedButton(
-              onPressed: () {
-                context.go('/home');
-              },
-              child: const Text("/home"),
-            ),
             ElevatedButton(
               onPressed: () {
                 context.go('/signUp');
@@ -29,10 +36,21 @@ class HomePage extends StatelessWidget {
               onPressed: () => context.go("/setting"),
               child: const Text("setting"),
             ),
+            ElevatedButton(
+              onPressed: () => context.go("/login"),
+              child: const Text("logout"),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "ID${TestUserModel.userInfo.id.toString()}",
+              child: Column(
+                children: [
+                  Text(
+                    "ID : ${TestUserModel.user.id}",
+                  ),
+                  Text(
+                    "PW : ${TestUserModel.user.pw}",
+                  )
+                ],
               ),
             )
           ],

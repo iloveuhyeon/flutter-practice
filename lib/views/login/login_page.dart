@@ -28,6 +28,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     TextField(
+                      obscureText: true,
                       controller: _pwController,
                       decoration: const InputDecoration(
                         labelText: "PW",
@@ -35,11 +36,12 @@ class LoginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TestUserModel.userInfo = TestUserModel(
-                          _idController.toString(),
-                          _pwController.toString(),
+                        TestUserModel.user = TestUserModel(
+                          _idController.text,
+                          _pwController.text,
                         );
-                        context.go("/home");
+                        print(_idController.text);
+                        context.go("/");
                       },
                       child: const Text("전송"),
                     )

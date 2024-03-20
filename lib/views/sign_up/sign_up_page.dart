@@ -8,7 +8,11 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: const Center(
-        child: Text("Sign_up"),
+        child: Column(
+          children: [
+            Text("Sign_up"),
+          ],
+        ),
       ),
     );
   }
