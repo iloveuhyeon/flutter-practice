@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   go_router: ^13.2.1
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+  assets: 
+    - assets/images/bottom_nav/house.svg
+    - assets/images/bottom_nav/health.svg
+    - assets/images/bottom_nav/light-up.svg
+    - assets/images/bottom_nav/person.svg
+    - assets/images/bottom_nav_property/house.svg
+    - assets/images/bottom_nav_property/health.svg
+    - assets/images/bottom_nav_property/light-up.svg
+    - assets/images/bottom_nav_property/person.svg
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
