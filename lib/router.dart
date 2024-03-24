@@ -13,7 +13,7 @@ class PageRouter {
   static const String _health = "health";
 
   static final GoRouter router = GoRouter(
-    initialLocation: "/",
+    initialLocation: _home,
     routes: [
       GoRoute(
         path: _home,

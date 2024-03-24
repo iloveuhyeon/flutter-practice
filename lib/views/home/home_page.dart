@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:practice/widgets/bottom_nav/bottom_nav.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,10 +7,20 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xfff8f8f9),
-      body: Text("hell"),
-      bottomNavigationBar: BottomNav(),
+    return Scaffold(
+      backgroundColor: const Color(0xfff8f8f9),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: SvgPicture.asset(
+              "assets/images/bottom_nav/person.svg",
+            ),
+          ),
+          const Text("hello world"),
+        ],
+      ),
     );
   }
 }
