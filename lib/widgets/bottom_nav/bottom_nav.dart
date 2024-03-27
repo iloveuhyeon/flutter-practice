@@ -8,50 +8,107 @@ class BottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        color: Colors.black,
+      child: SizedBox(
         height: 66,
         child: Row(
           children: [
-            SvgPicture.asset(
-              "assets/images/bottom_nav/house.svg",
+            SizedBox(
               height: 42,
               width: 78,
-            ),
-            SvgPicture.asset(
-              "assets/images/bottom_nav/health.svg",
-              height: 42,
-              width: 78,
-            ),
-            Container(
-              height: 42,
-              width: 78,
-              color: Colors.white,
-              child: const Column(
+              child: Column(
                 children: [
-                  SizedBox(
-                    width: 24,
+                  SvgPicture.asset(
+                    "assets/images/bottom_nav/house.svg",
                     height: 24,
+                    width: 24,
                   ),
-                  Text(
-                    "챗봇",
+                  const Text(
+                    "홈",
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
+                      color: Color(0xffb4b5b7),
                     ),
                   ),
                 ],
               ),
             ),
-            SvgPicture.asset(
-              "assets/images/bottom_nav/light-up.svg",
+            SizedBox(
               height: 42,
               width: 78,
+              child: Column(
+                children: [
+                  SvgPicture.asset(
+                    "assets/images/bottom_nav/health.svg",
+                  ),
+                  const Text(
+                    "건강",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xffb4b5b7),
+                    ),
+                  )
+                ],
+              ),
             ),
-            SvgPicture.asset(
-              "assets/images/bottom_nav/person.svg",
+            SizedBox(
               height: 42,
               width: 78,
+              child: Column(
+                children: [
+                  SvgPicture.asset("assets/images/bottom_nav/chatbot.svg"),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  const Text(
+                    "챗봇",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xffb4b5b7),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 42,
+              width: 78,
+              child: Column(
+                children: [
+                  SvgPicture.asset(
+                    "assets/images/bottom_nav/light-up.svg",
+                  ),
+                  const Text(
+                    "마음",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xffb4b5b7),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 42,
+              width: 78,
+              child: Column(
+                children: [
+                  SvgPicture.asset(
+                    "assets/images/bottom_nav/person.svg",
+                  ),
+                  const Text(
+                    "마이페이지",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xffb4b5b7),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
