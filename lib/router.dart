@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:practice/views/health/health_page.dart';
 import 'package:practice/views/heart/heart_page.dart';
-import 'package:practice/views/home/home_page.dart';
+import 'package:practice/views/main_page/main_page.dart';
 import 'package:practice/views/my_page/my_page.dart';
 import 'package:practice/views/splash/splash_page.dart';
 
@@ -17,7 +17,7 @@ class PageRouter {
     routes: [
       GoRoute(
         path: _home,
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => MainPage(),
         routes: [
           GoRoute(
             path: _splash,
