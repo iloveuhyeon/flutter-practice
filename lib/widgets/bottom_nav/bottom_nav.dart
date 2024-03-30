@@ -10,36 +10,61 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
+  int pageindex = 0;
+
   @override
   Widget build(BuildContext context) {
-    var navList = [
-      NavProperty(
-          src: "house.svg",
-          text: "홈",
-          index: 0,
-          tap: () => MainPage().pageindex = 0),
-      NavProperty(
-          src: "health.svg",
-          text: "건강",
-          index: 1,
-          tap: () => MainPage().pageindex = 1),
-      NavProperty(
-          src: "light-up.svg",
-          text: "마음",
-          index: 2,
-          tap: () => MainPage().pageindex = 2),
-      NavProperty(
-          src: "person.svg",
-          text: "마이페이지",
-          index: 3,
-          tap: () => MainPage().pageindex = 3),
-    ];
     return SafeArea(
       child: SizedBox(
         height: 66,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: navList,
+          children: [
+            NavProperty(
+              src: "house.svg",
+              text: "홈",
+              index: 0,
+              isSelected: pageindex == 0,
+              tap: () => setState(
+                () {
+                  pageindex = 0;
+                },
+              ),
+            ),
+            NavProperty(
+              src: "health.svg",
+              text: "건강",
+              index: 1,
+              isSelected: pageindex == 1,
+              tap: () => setState(
+                () {
+                  pageindex = 1;
+                },
+              ),
+            ),
+            NavProperty(
+              src: "light-up.svg",
+              text: "마음",
+              index: 2,
+              isSelected: pageindex == 2,
+              tap: () => setState(
+                () {
+                  pageindex = 2;
+                },
+              ),
+            ),
+            NavProperty(
+              src: "person.svg",
+              text: "마이페이지",
+              index: 3,
+              isSelected: pageindex == 3,
+              tap: () => setState(
+                () {
+                  pageindex = 3;
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -53,10 +78,12 @@ class NavProperty extends StatefulWidget {
     required this.text,
     required this.tap,
     required this.index,
+    required this.isSelected,
   });
   final String src;
   final String text;
   final int index;
+  final bool isSelected;
   final Function() tap;
 
   @override
@@ -77,9 +104,7 @@ class _NavPropertyState extends State<NavProperty> {
         child: Column(
           children: [
             SvgPicture.asset(
-              MainPage().pageindex == widget.index
-                  ? focusNav + widget.src
-                  : nav + widget.src,
+              widget.isSelected ? focusNav + widget.src : nav + widget.src,
               height: 24,
               width: 24,
             ),
@@ -88,7 +113,7 @@ class _NavPropertyState extends State<NavProperty> {
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
-                color: MainPage().pageindex == widget.index
+                color: widget.isSelected == widget.index
                     ? Colors.black
                     : const Color(0xffb4b5b7),
               ),
