@@ -17,7 +17,7 @@ class PageRouter {
     routes: [
       GoRoute(
         path: _home,
-        builder: (context, state) => MainPage(),
+        builder: (context, state) => const MainPage(),
         routes: [
           GoRoute(
             path: _splash,
