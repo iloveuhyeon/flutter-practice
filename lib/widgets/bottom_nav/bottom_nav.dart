@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:practice/views/main_page/main_page.dart';
+import 'package:practice/utils/utils.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -10,8 +10,6 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int pageindex = 0;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -113,9 +111,8 @@ class _NavPropertyState extends State<NavProperty> {
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
-                color: widget.isSelected == widget.index
-                    ? Colors.black
-                    : const Color(0xffb4b5b7),
+                color:
+                    widget.isSelected ? Colors.black : const Color(0xffb4b5b7),
               ),
             ),
           ],
