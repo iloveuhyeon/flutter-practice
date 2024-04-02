@@ -67,6 +67,14 @@ flutter:
     - assets/images/bottom_nav/chatbot.svg
     - assets/images/bottom_nav_property/chatbot.svg
     - assets/images/topbar/bell.svg
+  
+  fonts:
+    - family : EliceDXNeolliOTFbold
+      fonts:
+        - asset : assets/fonts/EliceDXNeolli_OTF/EliceDXNeolliOTF-Bold.otf
+    - family : EliceDXNeolliOTFmedium
+      fonts : 
+        - asset : assets/fonts/EliceDXNeolli_OTF/EliceDXNeolliOTF-Medium.otf
 
 
   # The following line ensures that the Material Icons font is

@@ -15,7 +15,12 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: page[pageindex],
+      body: SafeArea(
+        bottom: false,
+        right: false,
+        left: false,
+        child: page[pageindex],
+      ),
       bottomNavigationBar: BottomNav(
         onPageIndex: (index) => setState(
           () {
