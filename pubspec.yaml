@@ -66,6 +66,7 @@ flutter:
     - assets/images/bottom_nav_property/person.svg
     - assets/images/bottom_nav/chatbot.svg
     - assets/images/bottom_nav_property/chatbot.svg
+    - assets/images/topbar/bell.svg
 
 
   # The following line ensures that the Material Icons font is

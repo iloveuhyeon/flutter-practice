@@ -28,11 +28,11 @@ class BottomNav extends StatelessWidget {
               isSelected: pageindex == 1,
               tap: () => onPageIndex(1),
             ),
-            ChatBot(
-                src: "chatbot.svg",
-                text: "챗봇",
-                isSelected: pageindex == 2,
-                tap: () => onPageIndex(2)),
+            // ChatBot(
+            //     src: "chatbot.svg",
+            //     text: "챗봇",
+            //     isSelected: pageindex == 2,
+            //     tap: () => onPageIndex(2)),
             NavProperty(
               src: "light-up.svg",
               text: "마음",
