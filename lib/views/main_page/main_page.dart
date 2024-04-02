@@ -15,7 +15,6 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: page[pageindex],
       bottomNavigationBar: BottomNav(
         onPageIndex: (index) => setState(
