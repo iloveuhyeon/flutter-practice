@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:practice/utils/colors.dart';
+import 'package:practice/utils/utils.dart';
 
 class SurroundMarket extends StatelessWidget {
   const SurroundMarket({super.key});
@@ -9,7 +10,7 @@ class SurroundMarket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      height: 214,
+      height: 230,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -67,7 +68,7 @@ class SurroundMarketButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 176,
+      height: 190,
       width: 293,
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
@@ -86,24 +87,116 @@ class SurroundMarketButton extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset("assets/images/home/ex1.svg,"),
+              SvgPicture.asset('assets/images/homes/market.svg'),
               const SizedBox(
                 width: 12,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(storeName),
+                  Text(
+                    storeName,
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Pretendard'),
+                  ),
                   const SizedBox(
                     height: 8,
                   ),
-                  Text(storeLocation),
+                  Text(
+                    storeLocation,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Pretendard',
+                      color: marketGrey,
+                    ),
+                  ),
                 ],
               )
             ],
-          )
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          const Row(
+            children: [
+              Label(textIndex: 0),
+              Label(textIndex: 1),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 18.0),
+            child: Divider(
+              height: 1,
+              color: Color.fromRGBO(239, 240, 242, 1),
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "\"$storeName\"의 매장 정보 더 보기",
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontFamily: 'Pretendard',
+                  color: Color.fromRGBO(40, 112, 251, 1),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(width: 11.5),
+              const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 12,
+                weight: 5,
+                color: Color.fromRGBO(40, 112, 251, 1),
+              ),
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class Label extends StatelessWidget {
+  const Label({super.key, required this.textIndex});
+  final int textIndex;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          alignment: Alignment.center,
+          height: 30,
+          width: 56,
+          decoration: const BoxDecoration(
+            color: Color.fromRGBO(234, 241, 255, 1),
+            borderRadius: BorderRadius.all(
+              Radius.circular(16),
+            ),
+            border: Border.fromBorderSide(
+              BorderSide(
+                color: Color.fromRGBO(188, 211, 254, 1),
+              ),
+            ),
+          ),
+          child: Text(
+            labelText[textIndex],
+            style: const TextStyle(
+              fontSize: 12,
+              fontFamily: 'Pretendard',
+              fontWeight: FontWeight.w500,
+              color: Color.fromRGBO(40, 112, 251, 1),
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+      ],
     );
   }
 }

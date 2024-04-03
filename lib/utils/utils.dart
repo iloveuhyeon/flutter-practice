@@ -15,3 +15,8 @@ const page = [
   HeartPage(),
   MyPage(),
 ];
+
+const labelText = [
+  '식자재',
+  '그린푸드',
+];

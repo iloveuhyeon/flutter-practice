@@ -22,7 +22,7 @@ class TopBar extends StatelessWidget {
             ),
           ),
           SvgPicture.asset(
-            "assets/images/topbar/bell.svg",
+            "assets/images/topbars/bell.svg",
             height: 24,
             width: 24,
           )
