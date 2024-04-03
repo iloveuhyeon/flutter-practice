@@ -67,6 +67,7 @@ flutter:
     - assets/images/bottom_nav/chatbot.svg
     - assets/images/bottom_nav_property/chatbot.svg
     - assets/images/topbar/bell.svg
+    - assets/images/home/ex1.svg
   
   fonts:
     - family : EliceDXNeolliOTFbold
@@ -75,6 +76,17 @@ flutter:
     - family : EliceDXNeolliOTFmedium
       fonts : 
         - asset : assets/fonts/EliceDXNeolli_OTF/EliceDXNeolliOTF-Medium.otf
+    - family : Pretendard
+      fonts : 
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Black.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Bold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-ExtraBold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-ExtraLight.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Light.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Medium.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Regular.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-SemiBold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Thin.otf
 
 
   # The following line ensures that the Material Icons font is
