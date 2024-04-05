@@ -9,13 +9,8 @@ class HealthPage extends StatelessWidget {
   int getWeekOfMonth(int year, int month, int day) {
     DateTime date = DateTime(year, month, day);
 
-    // 해당 월의 첫 번째 날을 가져옴
     DateTime firstDayOfMonth = DateTime(year, month, 1);
-
-    // 해당 월의 첫 번째 날의 요일을 가져옴 (0: 월요일, 1: 화요일, ..., 6: 일요일)
     int firstDayOfWeek = firstDayOfMonth.weekday;
-
-    // 입력된 날짜가 몇 번째 주에 속하는지 계산
     int weekOfMonth = ((day + firstDayOfWeek - 1) / 7).ceil();
 
     return weekOfMonth;
