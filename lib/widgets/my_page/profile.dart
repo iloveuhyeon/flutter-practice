@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:practice/utils/text.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
-
+  const Profile({super.key, required this.name});
+  final String name;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

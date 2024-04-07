@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practice/utils/colors.dart';
 
-class HomeButton extends StatelessWidget {
-  const HomeButton({
+class ShortcutButton extends StatelessWidget {
+  const ShortcutButton({
     super.key,
     required this.firstText,
     required this.secondText,
