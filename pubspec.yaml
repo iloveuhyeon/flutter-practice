@@ -56,18 +56,9 @@ dev_dependencies:
 flutter:
 
   assets: 
-    - assets/images/bottom_nav/house.svg
-    - assets/images/bottom_nav/health.svg
-    - assets/images/bottom_nav/light-up.svg
-    - assets/images/bottom_nav/person.svg
-    - assets/images/bottom_nav_property/house.svg
-    - assets/images/bottom_nav_property/health.svg
-    - assets/images/bottom_nav_property/light-up.svg
-    - assets/images/bottom_nav_property/person.svg
-    - assets/images/bottom_nav/chatbot.svg
-    - assets/images/bottom_nav_property/chatbot.svg
-    - assets/images/topbars/bell.svg
-    - assets/images/homes/market.svg
+    - assets/images/
+ 
+    
   fonts:
     - family : EliceDXNeolliOTFbold
       fonts:
