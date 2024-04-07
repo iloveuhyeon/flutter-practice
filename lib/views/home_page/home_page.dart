@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/utils/text.dart';
 import 'package:practice/widgets/home/home_button.dart';
 import 'package:practice/widgets/home/surround_market.dart';
 import 'package:practice/widgets/topbar/topbar.dart';
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TopBar(text: "이주영님!"),
+              TopBar(text: '$name님'),
               TopBarDate(text: "이앱잼님을 위해 이런 서비스를 준비했어요"),
               const SizedBox(height: 16),
               const HomeButton(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:practice/utils/date.dart';
 
 class TopBarDate extends StatelessWidget {
   TopBarDate({super.key, required this.text});
   String text;
-  DateTime dt = DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +14,7 @@ class TopBarDate extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "${dt.year}년 ${dt.month}월 ${dt.day}일",
+            "$year년 $month월 $day일",
             style: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 14,
