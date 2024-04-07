@@ -69,6 +69,8 @@ flutter:
     - assets/images/topbars/bell.svg
     - assets/images/homes/market.svg
     - assets/images/my_page/profile.svg
+    - assets/images/my_page/coupon.svg
+    - assets/images/my_page/coupon_none.svg
     
   fonts:
     - family : EliceDXNeolliOTFbold
