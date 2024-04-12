@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/utils/index.dart';
+import 'package:practice/utils/page.dart';
 import 'package:practice/widgets/topbar/topbar.dart';
 
 class HeartPage extends StatefulWidget {
@@ -21,36 +21,40 @@ class _HeartPageState extends State<HeartPage> {
           child: Column(
             children: [
               TopBar(text: "당신의 마음이 항상 빛나길"),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  HeartButton(
-                    text: '마음',
-                    width: 28,
-                    index: 0,
-                    isSelected: heartButtonIndex == 0,
-                    onPressed: () {
-                      setState(() {
-                        heartButtonIndex = 0;
-                      });
-                    },
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  HeartButton(
-                    text: '고민 털어놓기',
-                    width: 87,
-                    index: 1,
-                    isSelected: heartButtonIndex == 1,
-                    onPressed: () {
-                      setState(() {
-                        heartButtonIndex = 1;
-                      });
-                    },
-                  )
-                ],
+              SizedBox(
+                height: 30,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    HeartButton(
+                      text: '마음',
+                      width: 28,
+                      index: 0,
+                      isSelected: heartButtonIndex == 0,
+                      onPressed: () {
+                        setState(() {
+                          heartButtonIndex = 0;
+                        });
+                      },
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    HeartButton(
+                      text: '고민 털어놓기',
+                      width: 87,
+                      index: 1,
+                      isSelected: heartButtonIndex == 1,
+                      onPressed: () {
+                        setState(() {
+                          heartButtonIndex = 1;
+                        });
+                      },
+                    )
+                  ],
+                ),
               ),
+              heartButtonPage[heartButtonIndex],
             ],
           ),
         ),
