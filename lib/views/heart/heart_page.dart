@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:practice/utils/page.dart';
+import 'package:practice/widgets/heart/heart_button.dart';
 import 'package:practice/widgets/topbar/topbar.dart';
 
 class HeartPage extends StatefulWidget {
@@ -19,12 +21,16 @@ class _HeartPageState extends State<HeartPage> {
         ),
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopBar(text: "당신의 마음이 항상 빛나길"),
-              SizedBox(
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8,
+                ),
                 height: 30,
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     HeartButton(
                       text: '마음',
@@ -32,9 +38,11 @@ class _HeartPageState extends State<HeartPage> {
                       index: 0,
                       isSelected: heartButtonIndex == 0,
                       onPressed: () {
-                        setState(() {
-                          heartButtonIndex = 0;
-                        });
+                        setState(
+                          () {
+                            heartButtonIndex = 0;
+                          },
+                        );
                       },
                     ),
                     const SizedBox(
@@ -46,66 +54,24 @@ class _HeartPageState extends State<HeartPage> {
                       index: 1,
                       isSelected: heartButtonIndex == 1,
                       onPressed: () {
-                        setState(() {
-                          heartButtonIndex = 1;
-                        });
+                        setState(
+                          () {
+                            heartButtonIndex = 1;
+                          },
+                        );
                       },
                     )
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 8,
               ),
               heartButtonPage[heartButtonIndex],
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class HeartButton extends StatelessWidget {
-  const HeartButton({
-    super.key,
-    required this.text,
-    required this.width,
-    required this.index,
-    required this.isSelected,
-    required this.onPressed,
-  });
-
-  final String text;
-  final double width;
-  final int index;
-  final bool isSelected;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: onPressed,
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: isSelected
-                  ? const Color.fromRGBO(40, 112, 251, 1)
-                  : const Color.fromRGBO(61, 61, 62, 1),
-            ),
-          ),
-        ),
-        if (isSelected)
-          Container(
-            height: 3,
-            width: width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(999),
-              color: const Color.fromRGBO(40, 112, 251, 1),
-            ),
-          ),
-      ],
     );
   }
 }
