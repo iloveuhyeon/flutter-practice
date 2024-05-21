@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practice/utils/date.dart';
 
-// ignore: must_be_immutable
 class TopBarDate extends StatelessWidget {
-  TopBarDate({super.key, required this.text});
-  String text;
+  const TopBarDate({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
