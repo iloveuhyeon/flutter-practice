@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:practice/utils/page.dart';
 import 'package:practice/widgets/heart/heart_button.dart';
 import 'package:practice/widgets/topbar/topbar.dart';
@@ -23,7 +22,7 @@ class _HeartPageState extends State<HeartPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TopBar(text: "당신의 마음이 항상 빛나길"),
+              const TopBar(text: "당신의 마음이 항상 빛나길"),
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 8,

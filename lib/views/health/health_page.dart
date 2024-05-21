@@ -9,20 +9,20 @@ class HealthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopBar(text: "영양 관리"),
               TopBarDate(text: "이주영님의 영양 상태"),
-              const HealthDate(),
-              const SizedBox(
+              HealthDate(),
+              SizedBox(
                 height: 28,
               ),
-              const SurroundMarket(),
+              SurroundMarket(),
             ],
           ),
         ),

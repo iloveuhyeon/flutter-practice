@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopBar(text: '$name님'),
-              TopBarDate(text: "이앱잼님을 위해 이런 서비스를 준비했어요"),
+              const TopBarDate(text: "이앱잼님을 위해 이런 서비스를 준비했어요"),
               const SizedBox(height: 16),
               const ShortcutButton(
                 firstText: "나를 위한 지원 알아보러가기",
