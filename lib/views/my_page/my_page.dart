@@ -16,7 +16,7 @@ class MyPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TopBar(text: "마이페이지"),
+              const TopBar(text: "마이페이지"),
               Profile(name: name),
               const SizedBox(
                 height: 12,

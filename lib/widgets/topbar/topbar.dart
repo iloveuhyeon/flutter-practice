@@ -1,12 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:practice/utils/index.dart';
 
 class TopBar extends StatefulWidget {
-  TopBar({super.key, required this.text});
-  String text;
+  const TopBar({super.key, required this.text});
+  final String text;
 
   @override
   State<TopBar> createState() => _TopBarState();

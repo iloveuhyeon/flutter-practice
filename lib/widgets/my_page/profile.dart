@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:practice/utils/text.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key, required this.name});

@@ -9,6 +9,7 @@ class HealthDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(),
       child: Text(
         "$year년 $month월 $weekofMonth주차 ",
         style: const TextStyle(

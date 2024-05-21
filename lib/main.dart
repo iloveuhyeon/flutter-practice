@@ -10,9 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      routeInformationParser: PageRouter.router.routeInformationParser,
+      routeInformationProvider: PageRouter.router.routeInformationProvider,
+      routerDelegate: PageRouter.router.routerDelegate,
     );
   }
 }
+
+//test

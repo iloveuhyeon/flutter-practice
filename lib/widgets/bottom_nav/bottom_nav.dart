@@ -4,11 +4,11 @@ import 'package:practice/utils/asset.dart';
 import 'package:practice/utils/page.dart';
 
 class BottomNav extends StatelessWidget {
-  BottomNav({
+  const BottomNav({
     super.key,
     required this.onPageIndex,
   });
-  Function(int index) onPageIndex;
+  final Function(int index) onPageIndex;
 
   @override
   Widget build(BuildContext context) {
