@@ -54,6 +54,43 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
+  assets: 
+    - assets/images/bottom_nav/house.svg
+    - assets/images/bottom_nav/health.svg
+    - assets/images/bottom_nav/light-up.svg
+    - assets/images/bottom_nav/person.svg
+    - assets/images/bottom_nav_property/house.svg
+    - assets/images/bottom_nav_property/health.svg
+    - assets/images/bottom_nav_property/light-up.svg
+    - assets/images/bottom_nav_property/person.svg
+    - assets/images/bottom_nav/chatbot.svg
+    - assets/images/bottom_nav_property/chatbot.svg
+    - assets/images/topbars/bell.svg
+    - assets/images/homes/market.svg
+    - assets/images/my_page/profile.svg
+    - assets/images/my_page/coupon.svg
+    - assets/images/my_page/coupon_none.svg
+    
+  fonts:
+    - family : EliceDXNeolliOTFbold
+      fonts:
+        - asset : assets/fonts/EliceDXNeolli_OTF/EliceDXNeolliOTF-Bold.otf
+    - family : EliceDXNeolliOTFmedium
+      fonts : 
+        - asset : assets/fonts/EliceDXNeolli_OTF/EliceDXNeolliOTF-Medium.otf
+    - family : Pretendard
+      fonts : 
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Black.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Bold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-ExtraBold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-ExtraLight.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Light.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Medium.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Regular.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-SemiBold.otf
+         - asset : assets/fonts/Pretendard_OTF/Pretendard-Thin.otf
+
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
